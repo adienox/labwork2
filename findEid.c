@@ -4,9 +4,9 @@
 
 struct employees
   {
+    char name[20];
     int empid;
     int salary;
-    char name[];
   };
 
 int main (int argc, char *argv[])
@@ -14,15 +14,15 @@ int main (int argc, char *argv[])
   struct employees emps[100];
   int search, record;
 
-  for (int i = 1; i <= 100; i++) {
+  for (int i = 0; i < 100; i++) {
     printf("Enter name, empid and salary of employee: ");
-    scanf("%s %d %d", &emps[i].name, &emps[i].empid, &emps[i].salary);
+    scanf("%s %d %d", emps[i].name, &emps[i].empid, &emps[i].salary);
   }
 
   printf("Enter empid to search: ");
   scanf("%d", &search);
 
-  for (int i = 1; i <= 100; i++) {
+  for (int i = 0; i < 100; i++) {
     if (emps[i].empid == search) {
       record = i;
       break;
