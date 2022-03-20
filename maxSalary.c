@@ -31,6 +31,7 @@ int main (int argc, char *argv[])
 
     if (emps[i].salary > maxSalary) {
       max = i;
+      maxSalary = emps[i].salary;
     }
   }
 
