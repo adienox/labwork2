@@ -34,6 +34,7 @@ void merge(struct student arr[], int l, int mid, int r)
   // Checking values within the temp arrays
   while (i < n1 && j < n2) {
     if(arr1[i].height < arr2[j].height){
+      arr[k] = arr1[i];
       i++;
     } else {
       arr[k] = arr2[j];
